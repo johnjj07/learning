@@ -21,16 +21,12 @@ public class FindMode extends Average {
             }
         }
         int highestCount = 0;
-        boolean actualSet = false;
-        int actualNumber = 0;
         for (Map.Entry<Integer, Integer> entry : counts.entrySet()) {
             if (entry.getValue() > highestCount) {
                 highestCount = entry.getValue();
-                actualNumber = entry.getKey();
-                actualSet = true;
             }
         }
-        if (highestCount <= 1 || !actualSet) {
+        if (highestCount <= 1) {
             System.out.println("No Mode");
         } else {
             Set<Integer> numbers = counts.keySet();
