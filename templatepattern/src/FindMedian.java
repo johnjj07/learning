@@ -11,7 +11,6 @@ public class FindMedian extends Average {
 
     @Override
     public void findAverage() {
-        Arrays.sort(numbers);
         if (numbers.length % 2 != 0) {
             System.out.println("The median is: " + numbers[numbers.length / 2]);
         } else {
